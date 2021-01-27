@@ -22,7 +22,7 @@ public class Project {
 	
 	@Id
 	@Column(name="id")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO,generator = "seqgen")
 	private Long id;
 	
 	@NotBlank(message = "Project name is required")
