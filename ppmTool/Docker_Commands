@@ -1,0 +1,5 @@
+#Build docker image
+>>docker build -t ppmtool .
+
+#Run docker container with linking to oracle_standalone container
+>>docker run -p 9999:9999 --name ppmtool --link oracle_standalone:oracleinanutshell/oracle-xe-11g
